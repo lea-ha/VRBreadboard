@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2745893372766771660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2745893372766771658}
+  - component: {fileID: 2745893372766771659}
+  - component: {fileID: 2745893372766771656}
+  - component: {fileID: 2745893372766771657}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2745893372766771658
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2745893372766771660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2745893372766771659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2745893372766771660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd53bcbfcb7694e11b4240fc900e2e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chipEditorPrefab: {fileID: 5537867366871689101, guid: d48b4f02647794ac2aba95960c3d59ab,
+    type: 3}
+  chipPackagePrefab: {fileID: 3466065292472579655, guid: e20c939cb564d41189a06c73aa43197e,
+    type: 3}
+  wirePrefab: {fileID: 761973689955804731, guid: 98fe3bedff56c4adc844cd3884dbdc92,
+    type: 3}
+  builtinChips:
+  - {fileID: 8869523655109081479, guid: 2296358475ab14fa7a35e4117255096a, type: 3}
+  - {fileID: 1267900139923996690, guid: b19a100a3d81b4c6e9a0c3c1362706c3, type: 3}
+  - {fileID: 2043041364998414551, guid: 299ea2b174160444f8a6a9065d0f0871, type: 3}
+  - {fileID: 325928065818453262, guid: d8a22eb19b4a35646b6bbaa7b66ef119, type: 3}
+  - {fileID: 4370981688201696047, guid: fecc938b0c660450ba39ad175f13ffc0, type: 3}
+  - {fileID: 894826051406503273, guid: 808e12d27921848a59bac447b93aec0f, type: 3}
+  - {fileID: 115530211412355723, guid: 65fccb77ce2e8b141be2883a450bd104, type: 3}
+  - {fileID: 7051442128332312624, guid: 6cc2f15dbedacd24c91ce8f6e9208840, type: 3}
+  - {fileID: 6632021948943085525, guid: 43f8221980e4d3d40b32a6a6e2454ab0, type: 3}
+  - {fileID: 7051442128332312624, guid: 584a382f69ef0ca45a8606c5819b52cb, type: 3}
+  - {fileID: 6632021948943085525, guid: d1a4d6dbed2e8cf42bbde6adfea7e79c, type: 3}
+  - {fileID: 7051442128332312624, guid: 3cb180636ef96384982e75ebf81ca08c, type: 3}
+  - {fileID: 6632021948943085525, guid: e7e9803706278f642855ed313fa69546, type: 3}
+  - {fileID: 286808261455957341, guid: 184fc6762f746804aa23328309645795, type: 3}
+  - {fileID: -6260489656382857768, guid: 99de4470dbba3194e9450daa3e1073ad, type: 3}
+  SpawnableCustomChips: []
+  UIManager: {fileID: 0}
+--- !u!114 &2745893372766771656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2745893372766771660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b97861e8299e444a4894ecb8195b2f72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2745893372766771657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2745893372766771660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 707e03c65a80345cf9c9e26633c5010e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
