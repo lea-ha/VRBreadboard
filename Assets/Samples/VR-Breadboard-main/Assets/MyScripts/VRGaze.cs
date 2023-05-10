@@ -9,6 +9,8 @@ public class VRGaze : MonoBehaviour
     public float totalTime = 2;
     bool gvrStatus;
     float gvrTimer;
+    public GameObject ScriptRun;
+  
 
     static public GameObject hand;
     public Transform handtrans = hand.transform;
@@ -30,7 +32,7 @@ public class VRGaze : MonoBehaviour
             imgGaze.fillAmount = gvrTimer / totalTime;
         }
 
-        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.5f));
+        /*Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.5f));
         if (Physics.Raycast(ray, out _hit, distance))
         {
             if (imgGaze.fillAmount == 1 && _hit.transform.CompareTag("IC") && gvrStatus)
@@ -39,6 +41,11 @@ public class VRGaze : MonoBehaviour
 
                 gvrStatus = false;
             }
+        }*/
+
+        if (gvrTimer > 2)
+        {
+            RunScript();
         }
     }
 
@@ -63,5 +70,10 @@ public class VRGaze : MonoBehaviour
     {
         GVROff();
         Debug.Log("Exited IC");
+    }
+
+    public void RunScript()
+    {
+        ScriptRun.SetActive(true);
     }
 }
