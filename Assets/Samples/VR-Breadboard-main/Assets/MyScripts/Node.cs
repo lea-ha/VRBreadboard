@@ -10,25 +10,22 @@ public class Node : MonoBehaviour
 
     void setHigh()
     {
-        if(node1.high || node2.high || node3.high || node4.high || node5.high)
+        
+
+        if (high)
         {
-            high = true;
-            //this is working 
-            foreach(Transform child in transform)
-            {
-                child.GetComponent<Pin>().high = true;
-            } 
-            
-        } else
-        {
-            high = false;
             foreach (Transform child in transform)
             {
-                Renderer renderer = child.GetComponent<Renderer>();
-                renderer.material.color = Color.gray;
+                child.GetComponent<Pin>().high = true;
+            }
+        }
+
+        if (!high)
+        {
+            foreach (Transform child in transform)
+            {
                 child.GetComponent<Pin>().high = false;
-            } 
-            
+            }
         }
     }
 

@@ -40,16 +40,24 @@ public class NodeAssign : MonoBehaviour
             CreateWire();
             startPin = startCube.GetComponent<Pin>();
             endPin = endCube.GetComponent<Pin>();
-            if (startPin.high)
+            Transform parent = endCube.transform.parent;
+            
+            if(startPin.high)
             {
-                endPin.high = true;
+                
+                Node node = parent.GetComponent<Node>();
+                Debug.Log("Node is:" + node.high);
+                node.high = true;
+                Debug.Log("Node after is: " + node.high);
             }
-            else
+            
+            else if(parent.GetComponent<Node>() != null && !startPin.high)
             {
-                endPin.high = false;
+                Node node = parent.GetComponent<Node>();
+                node.high = true;
             }
-            startCube.tag = "Node";
-            endCube.tag = "Node";
+            startCube.tag = "Untagged";
+            endCube.tag = "Untagged";
         }
 
         if (startNodes.Length == 0 && endNodes.Length == 0)

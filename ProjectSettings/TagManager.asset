@@ -9,6 +9,7 @@ TagManager:
   - EndNode
   - Node
   - StartNode
+  - SideNode
   layers:
   - Default
   - TransparentFX

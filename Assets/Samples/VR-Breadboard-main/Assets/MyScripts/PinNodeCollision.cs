@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PinNodeCollision : MonoBehaviour
 {
-    private outputNAND pin;
-    private Pin myPin;
+    private outputAND pin;
+    private Node myPin;
     // Start is called before the first frame update
     void Start()
     {
-        myPin = GetComponent<Pin>();
+        Transform parent = transform.parent;
+
+        myPin = parent.GetComponent<Node>();
     }
 
     // Update is called once per frame
@@ -19,15 +21,21 @@ public class PinNodeCollision : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if(other.name == "pin3")
+        if(other.tag == "Pin")
         {
-            pin = other.GetComponent<outputNAND>();
-
-            if (pin.high == true)
+            if(other.GetComponent<outputAND>() != null)
             {
-                myPin.high = true;
+                pin = other.GetComponent<outputAND>();
+
+                if (pin.high == true)
+                {
+                    myPin.high = true;
+                }
             }
+            
         }
+            
+        
         
     }
 }

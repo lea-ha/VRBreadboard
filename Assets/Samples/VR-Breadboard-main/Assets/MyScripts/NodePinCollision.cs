@@ -19,9 +19,11 @@ public class NodePinCollision : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
+       
         pin = other.GetComponent<Pin>();
         if (pin.high)
         {
+           
             myPin.high = true;
         }
         else

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class outputAND : MonoBehaviour
 {
-    public Pin pin1, pin2;
+    public Pin pin1, pin2, pinVcc;
 
     public Boolean high = false;
 
@@ -17,7 +17,7 @@ public class outputAND : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(pin1.high && pin2.high)
+        if(pin1.high && pin2.high && pinVcc.high)
         {
             high = true;
         } else

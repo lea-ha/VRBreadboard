@@ -22,30 +22,48 @@ public class NodeUnassign : MonoBehaviour
     }
 
     void OnPointerEnter()
-    {
+    { 
         GameObject[] startNodes = GameObject.FindGameObjectsWithTag("StartNode");
         GameObject[] endNodes = GameObject.FindGameObjectsWithTag("EndNode");
 
-        if (startNodes.Length != 0 && endNodes.Length == 0)
+        if(startNodes.Length == 0 && endNodes.Length == 0)
         {
-            gameObject.tag = "EndNode";
-            endNodes = GameObject.FindGameObjectsWithTag("EndNode");
-            startCube = startNodes[0];
-            endCube = endNodes[0];
-            startPin = startCube.GetComponent<Pin>();
-            endPin = endCube.GetComponent<Pin>();
-            LineRenderer wire = startCube.GetComponent<LineRenderer>();
-            if (wire != null && startPin.high)
+            Transform parent = transform.parent;
+            if(parent.tag == "SideNode")
             {
-                Destroy(wire);
-                endPin.high = false;
+                gameObject.tag = "StartNode";
+                startNodes = GameObject.FindGameObjectsWithTag("StartNode");
             }
         }
 
-        if (startNodes.Length == 0 && endNodes.Length == 0)
+        if(startNodes.Length != 0 && endNodes.Length == 0)
         {
+            Transform parent = gameObject.transform.parent;
+            if (parent.tag == "Node")
+            {
+                gameObject.tag = "EndNode";
+                endNodes = GameObject.FindGameObjectsWithTag("EndNode");
 
-            gameObject.tag = "StartNode";
+                startCube = startNodes[0];
+                endCube = endNodes[0];
+                if (startCube.GetComponent<LineRenderer>() != null)
+                {
+                    LineRenderer lineRenderer = startCube.GetComponent<LineRenderer>();
+                    Destroy(lineRenderer);
+
+                    if (parent.GetComponent<Node>() != null)
+                    {
+                        Debug.Log("parent has a node component!");
+                        Node node = parent.GetComponent<Node>();
+                        node.high = false;
+                        Debug.Log(node.high);
+                    }
+                }
+            }
+            startCube.tag = "Untagged";
+            endCube.tag = "Untagged";
+
+
 
         }
     }
