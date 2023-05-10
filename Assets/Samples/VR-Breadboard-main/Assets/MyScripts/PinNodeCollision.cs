@@ -11,7 +11,7 @@ public class PinNodeCollision : MonoBehaviour
     {
         Transform parent = transform.parent;
 
-        myPin = parent.GetComponent<Node>();
+        myPin = parent.gameObject.GetComponent<Node>();
     }
 
     // Update is called once per frame
@@ -27,9 +27,13 @@ public class PinNodeCollision : MonoBehaviour
             {
                 pin = other.GetComponent<outputAND>();
 
-                if (pin.high == true)
+                if (pin.high)
                 {
                     myPin.high = true;
+                }
+                if (!pin.high)
+                {
+                    myPin.high = false;
                 }
             }
             
