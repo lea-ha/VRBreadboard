@@ -10,6 +10,7 @@ TagManager:
   - Node
   - StartNode
   - SideNode
+  - Chip
   layers:
   - Default
   - TransparentFX
