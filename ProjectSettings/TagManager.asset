@@ -11,6 +11,7 @@ TagManager:
   - StartNode
   - SideNode
   - Chip
+  - Pointer
   layers:
   - Default
   - TransparentFX

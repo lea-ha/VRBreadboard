@@ -21933,6 +21933,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ca5b7f5285e2d49a31f14687c3006f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imgGaze: {fileID: 0}
+  totalTime: 2
   reticle: {fileID: 0}
 --- !u!1 &1103499096
 GameObject:
@@ -22063,6 +22065,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ca5b7f5285e2d49a31f14687c3006f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imgGaze: {fileID: 1666099308}
+  totalTime: 2
   reticle: {fileID: 2123877554}
 --- !u!1 &1109559732
 GameObject:
@@ -29179,6 +29183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ca5b7f5285e2d49a31f14687c3006f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imgGaze: {fileID: 0}
+  totalTime: 2
   reticle: {fileID: 0}
 --- !u!1 &1461189520
 GameObject:
@@ -32520,7 +32526,7 @@ GameObject:
   - component: {fileID: 1666099308}
   m_Layer: 5
   m_Name: Pointer
-  m_TagString: Untagged
+  m_TagString: Pointer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34495,6 +34501,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ca5b7f5285e2d49a31f14687c3006f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imgGaze: {fileID: 0}
+  totalTime: 2
   reticle: {fileID: 0}
 --- !u!1 &1775112902
 GameObject:
@@ -35485,6 +35493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ca5b7f5285e2d49a31f14687c3006f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imgGaze: {fileID: 0}
+  totalTime: 2
   reticle: {fileID: 0}
 --- !u!1 &1853994588
 GameObject:
